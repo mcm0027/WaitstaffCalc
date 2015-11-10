@@ -1,0 +1,169 @@
+h1 {
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+
+.enter {
+  width: 40%;
+  border: 2px solid black;
+  display: inline-block;
+  float: left;
+  margin-right: 4%;
+  margin-left: 7%;
+}
+
+.enter h2 {
+  text-align: left;
+  margin-left: 1em;
+  margin: .4em .5em .4em 1em;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+.enterLeft {
+  float: left;
+  width: 50%;
+  text-align: right;
+  margin-right: .5em;
+  margin-left: .5em
+}
+
+.enterLeft p {
+  padding-right: 1em;
+}
+
+.enterRight {
+  float: left;
+  width: 45%;
+  text-align: left;
+}
+
+.enterLeft h3 {
+  margin-top: 1.5em;
+}
+
+.enterRight h3 {
+  margin-top: 1.5em;
+}
+
+.enterRight h3 input{
+  border: 2px solid black;
+}
+
+#mealInput {
+  width: 120px;
+}
+
+#taxInput,
+#tipInput {
+  width: 50px;
+}
+
+
+#buttons {
+  margin-top: 6em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+#subButton,
+#cancelButton,
+#resetButton{
+  background: white;
+  border: 2px solid black;
+  box-shadow: 2px 2px black;
+  font-size: 1.1em
+}
+
+#subButton {
+  margin-right: .5em;
+}
+
+#cancelButton {
+  margin-left: .5em;
+}
+
+#customerCharges {
+  text-align: left;
+  width: 40%;
+  display: inline-block;
+  border: 2px solid black;
+  float:left;
+}
+
+#customerCharges h2 {
+  text-align: left;
+  margin-left: 1em;
+  margin: .4em .5em .4em 1em;
+}
+
+.customerSubs {
+  text-align: right;
+  margin-right: 55%;
+  margin-bottom: 1em;
+}
+
+#subLine {
+  margin-right: 50%;
+  margin-left: 15%;
+}
+
+#earnings {
+  width: 40%;
+  border: 2px solid black;
+  margin-top: 2em;
+  float: left;
+  display: inline-block;
+}
+
+#earnings h2 {
+  text-align: left;
+  margin-left: 1em;
+  margin: .4em .5em .4em 1em;
+}
+
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  vertical-align: top;
+}
+
+.symbol {
+  padding-left: .25em;
+  padding-right: .25em;
+}
+
+.errors {
+  text-align: center;
+  display: inline-block;
+  width: 80%;
+  margin-bottom: -3em;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.charges {
+  padding-right: 0.5em;
+}
+
+.earningsText {
+  display: inline-block;
+  padding-right: .5em;
+  text-align: right
+}
+
+.earningsNums {
+  display: inline-block
+}
+
+.reset {
+  margin-left: 2em;
+  position: absolute;
+  bottom: 4.5em;
+}
