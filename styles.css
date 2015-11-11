@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  font-size: 2.8em;
 }
 
 main {
@@ -7,12 +8,10 @@ main {
 }
 
 .enter {
+  text-align: center;
   width: 40%;
+  margin: 2em 30%;
   border: 2px solid black;
-  display: inline-block;
-  float: left;
-  margin-right: 4%;
-  margin-left: 7%;
 }
 
 .enter h2 {
@@ -66,8 +65,8 @@ hr {
 
 
 #buttons {
-  margin-top: 6em;
-  margin-bottom: 4em;
+  margin-top: 0em;
+  margin-bottom: 2em;
   text-align: center;
 }
 
@@ -93,7 +92,7 @@ hr {
   width: 40%;
   display: inline-block;
   border: 2px solid black;
-  float:left;
+  margin: 0 30%;
 }
 
 #customerCharges h2 {
@@ -116,8 +115,7 @@ hr {
 #earnings {
   width: 40%;
   border: 2px solid black;
-  margin-top: 2em;
-  float: left;
+  margin: 2em 30%;
   display: inline-block;
 }
 
@@ -154,8 +152,9 @@ hr {
 
 .earningsText {
   display: inline-block;
-  padding-right: .5em;
-  text-align: right
+  padding-right: 0.5em;
+  text-align: right;
+  margin-left: 0.5em;
 }
 
 .earningsNums {
@@ -163,7 +162,46 @@ hr {
 }
 
 .reset {
-  margin-left: 2em;
-  position: absolute;
-  bottom: 4.5em;
+  margin-top: .8em;
+}
+
+.links {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 1em;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul li:nth-child(2) {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.homeText {
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 1.5;
+  margin: 3em 25% 0 25%;
+}
+
+.mealContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.earnings {
+  
+}
+
+.buttonDiv {
+  text-align: center;
 }

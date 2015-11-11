@@ -1,0 +1,18 @@
+<section class="earnings">
+  <form id="earnings">
+    <h2>My Earnings for This Shift</h2>
+    <hr>
+    <div class="earningsText">
+      <h3>Tip Total:</h3>
+      <h3>Meal count:</h3>
+      <h3>Average Tip Per Meal:</h3>
+    </div>
+    <div class="earningsNums">
+      <h3>{{earnings.tipTotal| currency}}</h3>
+      <h3>{{earnings.mealCount}}</h3>
+      <h3>{{ earnings.average | currency}}</h3>
+    </div>
+  </form>
+</section>  
+</div>
+<aside class="buttonDiv"> <button class="reset" id="resetButton" ng-click="reset()">Reset</button></aside>

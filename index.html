@@ -4,75 +4,24 @@
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
-    
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
     <script src="script.js"></script>
   </head>
-  <body ng-app="myApp" ng-controller="oneController">
+  <body ng-app="myApp">
     <div class="container">
       <h1>Waitstaff Calculator</h1>
-
-        <section class="enter">
-          <form name="form" id="enter" novalidate>
-            <h2>Enter the Meal Details</h2>
-            <hr>
-            <div class="enterLeft"> 
-              <h3>Base Meal Price:  <span class="symbol">$</span></h3>
-              <h3>Tax Rate: % </h3>
-              <h3>Tip Percentage: % </h3>
-            </div>
-
-            <div class="enterRight">
-              <h3> <input id="mealInput" type="number" name="mealPrice" ng-model="mealPrice" placeholder="0" required></h3>
-              <h3><input id="taxInput" type="number" ng-model="taxRate" name="taxRate" placeholder="0" required></h3>
-              <h3><input id="tipInput" type="number" ng-model="tipRate" name="tipRate" placeholder="0" required></h3>
-            </div>
-            <div class="errors">
-              <h3 ng-if="form.mealPrice.$error.required && showError === true">Please enter a meal price.</h3>
-              <h3 ng-if="form.taxRate.$error.required && showError === true">Please enter a tax rate.</h3>
-              <h3 ng-if="form.tipRate.$error.required && showError === true">Please enter a meal price.</h3>
-            </div>
-            <div style="clear: both"></div>
-
-            <div id="buttons">
-              <button id="subButton" ng-click="submit()">Submit</button>
-              <button id="cancelButton" ng-click="cancel()">Cancel</button>
-            </div>
-          </form>
-        </section>
+      
+      <div class="links">
+        <ul>
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/new_meal">New Meal</a></li>
+          <li><a href="#/my_earnings">My Earnings</a></li>
+        </ul>
+      </div> 
+        <div ng-view></div>
 
 
-        <section id="customerCharges">
-          <form id="charges">
-            <h2>Customer Charges</h2>
-            <hr>
-            <div class="customerSubs">
-              <h3> <span class="charges">Subtotal</span>  {{customerCharges.subTotal | currency}}</h3>
-              <h3> <span class="charges">Tip</span>  {{ customerCharges.tip | currency}}</h3> 
-            </div>
-            <hr id="subLine">
-            <h3 class="customerSubs"><span class="charges"> Total </span>  {{ customerCharges.total | currency}}</h3>
-          </form>
-        </section>
-
-
-        <section class="earnings">
-          <form id="earnings">
-            <h2>My Earnings Info</h2>
-            <hr>
-            <div class="earningsText">
-              <h3>Tip Total:</h3>
-              <h3>Meal count:</h3>
-              <h3>Average Tip Per Meal:</h3>
-            </div>
-            <div class="earningsNums">
-              <h3>{{earnings.tipTotal| currency}}</h3>
-              <h3>{{earnings.mealCount}}</h3>
-              <h3>{{ earnings.average | currency}}</h3>
-            </div>
-          </form>
-        </section>  
     </div>
-    <aside> <button class="reset" id="resetButton" ng-click="reset()">Reset</button></aside>
   </body>
 </html>

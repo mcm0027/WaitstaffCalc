@@ -1,7 +1,20 @@
-angular.module("myApp", [])
-  .controller('oneController', OneController);
-
-  function OneController($scope) {
+angular.module("myApp", ['ngRoute'])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider.when('/', {
+      templateUrl : './home.html',
+      controller : 'OneController'
+    }).when('/new_meal', {
+      templateUrl : './new_meal.html',
+      controller : 'OneController'
+    }).when('/my_earnings', {
+      templateUrl : './my_earnings.html',
+      controller : 'OneController'
+    }).otherwise('/' , {
+      templateUrl : './home.html',
+      controller : 'OneController'
+    });
+  }])
+  .controller('OneController', function ($scope) {
     $scope.mealPrice;
     $scope.taxRate;
     $scope.tipRate; 
@@ -44,7 +57,7 @@ angular.module("myApp", [])
       $scope.mealPrice = '';
       $scope.taxRate = '';
       $scope.tipRate = ''; 
-    }
+    };
     
     $scope.reset = function() {
       document.getElementById("enter").reset();
@@ -61,5 +74,5 @@ angular.module("myApp", [])
       $scope.form.$submitted = false;
       $scope.showError = false;
 
-    }
-};
+    };
+});
