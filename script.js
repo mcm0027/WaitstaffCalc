@@ -1,4 +1,4 @@
-angular.module("myApp", ['ngRoute'])
+angular.module("myApp", ['ngRoute', 'ngAnimate'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
       templateUrl : './home.html',
@@ -55,12 +55,12 @@ angular.module("myApp", ['ngRoute'])
   };
     
     $scope.cancel = function() {
-      $scope.getElementById("enter").reset();
+      document.getElementById("enter").reset();
       $scope.form.$submitted = false;
       $scope.showError = false;
-      $scope.mealPrice = '';
-      $scope.taxRate = '';
-      $scope.tipRate = ''; 
+      $scope.mealPrice = 0;
+      $scope.taxRate = 0;
+      $scope.tipRate = 0; 
     };
   
   $scope.reset = function() {
@@ -81,6 +81,9 @@ angular.module("myApp", ['ngRoute'])
   
 })
 .controller('EarningsController', function ($scope, $rootScope) {
-  $rootScope.earnings.tipTotal
+  $rootScope.earnings.tipTotal;
+  $scope.reset = function() {
+    $rootScope.earnings = {};
+  }
   
 });
